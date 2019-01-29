@@ -1,9 +1,31 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
+    <form action="{{ path('app_default_changelocale') }}" method="post">
+        <input type="hidden" name="redirect_url" value="{{ path('app_default_i18n') }}">
+        <input type="hidden" name="_method" value="PUT">
+        <label for="locale">Langue</label>
+        <select name="locale" id="locale" required>
+            <option disabled selected>--</option>
+            <option value="fr">Français</option>
+            <option value="en">Anglais</option>
+        </select>
+        <button>Choisir</button>
+    </form>
+
     <p>{{ controllerMessage }}</p>
     <p>{{ twigMessage | trans }}</p>
     <p>{{ 'app.training.twig_inside_message' | trans }}</p>
     <p>{{ 'app.training.with_var' | trans({ '%key1%': 'coucou', '%key2%': 1234 }) }}</p>
+    <p>{{ 'app.pluralization.first' | transchoice(1) }}</p>
+    <p>{{ 'app.pluralization.first' | transchoice(37) }}</p>
+    <p>{{ 'app.pluralization.second' | transchoice(1) }}</p>
+    <p>{{ 'app.pluralization.second' | transchoice(8) }}</p>
+    <p>Autre domaine {{ 'hr.leavePeriod.paidDays' | trans({}, 'humanResources') }}</p>
+
+    {% trans_default_domain 'humanResources' %}
+
+    <p>Autre domaine {{ 'hr.leavePeriod.paidDays' | trans }}</p>
+
 {% endblock %}
 
