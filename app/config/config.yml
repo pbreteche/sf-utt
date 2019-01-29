@@ -69,3 +69,7 @@ swiftmailer:
 sensio_framework_extra:
    router:
         annotations: false
+
+webpack_encore:
+    # The path where Encore is building the assets - i.e. Encore.setOutputPath()
+    output_path: '%kernel.root_dir%/../web/build'

@@ -19,6 +19,7 @@
             "vendor/symfony/symfony/src/Symfony/Component/VarDumper/Resources/functions/dump.php"
         ]
     },
+    "repositories": { },
     "require": {
         "php": ">=5.5.9",
         "ext-json": "*",
