@@ -2,5 +2,8 @@
 
 {% block body %}
     <p>{{ controllerMessage }}</p>
+    <p>{{ twigMessage | trans }}</p>
+    <p>{{ 'app.training.twig_inside_message' | trans }}</p>
+    <p>{{ 'app.training.with_var' | trans({ '%key1%': 'coucou', '%key2%': 1234 }) }}</p>
 {% endblock %}
 

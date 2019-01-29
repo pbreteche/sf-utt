@@ -1,1 +1,6 @@
-app.training.controller_message: Ceci est un message en français créé depuis le contrôleur
+app:
+    training:
+        controller_message: Ceci est un message en français créé depuis le contrôleur
+        twig_message: Ceci est toujours un message en français mais produit par le moteur de template
+        twig_inside_message: Ce message là est directement embarqué dans le template
+        with_var: 'Message avec une variable %key1%, %key1%, %key1% et une autre %key2%.'

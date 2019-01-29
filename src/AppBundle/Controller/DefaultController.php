@@ -12,7 +12,7 @@ use Symfony\Component\Translation\TranslatorInterface;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/i18n")
+     * @Route("/{_locale}/i18n")
      */
     public function i18nAction(TranslatorInterface $translator)
     {
@@ -20,6 +20,7 @@ class DefaultController extends Controller
 
         return $this->render('default/i18n.html.twig', [
             'controllerMessage' => $message,
+            'twigMessage' => 'app.training.twig_message'
         ]);
     }
 

@@ -1,0 +1,6 @@
+app:
+    training:
+        controller_message: This is a message in english from controller
+        twig_message: This is a message in english again but from template engine
+        twig_inside_message: This one is made right from template file
+        with_var: 'Message with variable %key1%, %key1%, %key1% and another %key2%.'
